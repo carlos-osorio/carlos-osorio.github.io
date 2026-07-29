@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carlos Osorio-Ramírez — Profesor Asociado, Universidad Nacional de Colombia. Supply Chain Management, optimización, simulación, analítica logística.">
+  <meta name="keywords" content="Carlos Osorio-Ramírez, UNAL, supply chain, logística, optimización, simulación, analítica">
+  <meta name="author" content="Carlos Osorio-Ramírez">
+  <meta property="og:title" content="Carlos Osorio-Ramírez">
+  <meta property="og:description" content="Profesor Asociado — Universidad Nacional de Colombia. Supply Chain Management, optimización, analítica logística.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carlos-osorio.github.io/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Carlos Osorio-Ramírez">
+  <meta name="twitter:description" content="Profesor Asociado — Universidad Nacional de Colombia">
+  <link rel="canonical" href="https://carlos-osorio.github.io/">
+  <title>Carlos Osorio-Ramírez</title>
+  <style>
+    :root {
+      --bg: #f8f9fa;
+      --sidebar-bg: #1a365d;
+      --sidebar-text: #e2e8f0;
+      --sidebar-link: #90cdf4;
+      --text: #1a202c;
+      --text-light: #4a5568;
+      --accent: #2b6cb0;
+      --card-bg: #ffffff;
+      --radius: 10px;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --transition: 150ms ease;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: "Segoe UI", Roboto, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ─── Sidebar ─── */
+    .sidebar {
+      width: 300px;
+      background: var(--sidebar-bg);
+      color: var(--sidebar-text);
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .foto-wrap {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+      border: 4px solid rgba(255,255,255,0.2);
+      background: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .foto-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .foto-placeholder {
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.4);
+      user-select: none;
+    }
+    .sidebar h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: #fff;
+      line-height: 1.25;
+    }
+    .sidebar .cargo {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--sidebar-link);
+      margin-bottom: 1rem;
+    }
+    .sidebar .afiliacion {
+      font-size: 0.82rem;
+      line-height: 1.55;
+      opacity: 0.9;
+    }
+    .sidebar .afiliacion-spacer {
+      margin-top: 0.5rem;
+    }
+    .sidebar .contacto {
+      font-size: 0.85rem;
+      margin-top: auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      width: 100%;
+    }
+    .sidebar a {
+      color: var(--sidebar-link);
+      text-decoration: none;
+      transition: opacity var(--transition);
+    }
+    .sidebar a:hover { text-decoration: underline; opacity: 1; }
+
+    /* ─── Main ─── */
+    .main {
+      flex: 1;
+      padding: 2.5rem 3rem;
+      max-width: 800px;
+    }
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin: 2.2rem 0 0.8rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.3rem;
+      font-weight: 700;
+    }
+    h2:first-of-type { margin-top: 0; }
+    ul { list-style: none; padding: 0; }
+    li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.55;
+    }
+    li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Cards */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1rem 1.2rem;
+      margin: 0.8rem 0;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--accent);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .card:hover {
+      transform: translateX(4px);
+      box-shadow: 0 6px 12px -2px rgba(0,0,0,0.12);
+    }
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .card h3 a { color: var(--accent); font-weight: 600; }
+    .card h3 a::after {
+      content: "↗";
+      font-size: 0.8rem;
+      opacity: 0.5;
+      transition: opacity var(--transition);
+    }
+    .card h3 a:hover::after { opacity: 1; }
+    .card p {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .desc {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-align: left;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      body { flex-direction: column; }
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 2rem 1.5rem;
+      }
+      .foto-wrap { width: 130px; height: 130px; }
+      .sidebar .contacto { margin-top: 1.5rem; }
+      .main { padding: 1.5rem; max-width: none; }
+      h2:first-of-type { margin-top: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="foto-wrap">
+      <!-- Cuando subas tu foto a assets/img/prof_pic.jpg, se mostrará.
+           Mientras tanto, aparece un placeholder con tus iniciales. -->
+      <img src="assets/img/prof_pic.jpg"
+           alt="Foto de Carlos Osorio-Ramírez"
+           onerror="this.style.display='none'; this.parentNode.innerHTML='<span class=\'foto-placeholder\'>CO</span>';">
+    </div>
+    <h1>Carlos Osorio-Ramírez</h1>
+    <div class="cargo">Profesor Asociado</div>
+    <div class="afiliacion">
+      <div>Escuela de Administración y Contaduría Pública</div>
+      <div><a href="https://fce.unal.edu.co/facultad/">Facultad de Ciencias Económicas</a></div>
+      <div>Universidad Nacional de Colombia</div>
+      <div class="afiliacion-spacer">Director, <a href="https://fce.unal.edu.co/facultad/cid">Centro de Investigaciones para el Desarrollo</a></div>
+      <div>Coordinador, <a href="https://fce.unal.edu.co/uace/">Unidad de Análisis en Ciencias Económicas</a></div>
+    </div>
+    <div class="contacto">
+      <div>✉ caosoriora@unal.edu.co</div>
+      <div style="margin-top:0.3rem;"><a href="https://scholar.google.com/citations?user=75wxZ4AAAAAJ">Google Scholar ↗</a></div>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <h2>Formación</h2>
+    <ul>
+      <li>PhD en Ingeniería — Industria y Organizaciones, Universidad Nacional de Colombia</li>
+      <li>Ingeniero Industrial, Universidad Industrial de Santander</li>
+      <li>Graduate Certificate in Logistics and Supply Chain Management, MIT</li>
+    </ul>
+
+    <h2>Áreas de interés</h2>
+    <ul>
+      <li>Logística agroindustrial, de salud y humanitaria</li>
+      <li>Gestión de la cadena de suministro</li>
+      <li>Sistemas complejos (Network science; Agent-based modeling; systems dynamics)</li>
+      <li>GPU-Accelerated Decision Optimization</li>	
+      <li>LLM-based Optimization Modeling</li>
+      <li>Programación estocástica/Procesos estocásticos</li>      
+      <li>Analítica predictiva y prescriptiva</li>
+      <li>IA aplicada a pymes</li>
+    </ul>
+
+    <h2>Docencia</h2>
+    <ul>
+      <li>Analítica de Negocios</li>
+      <li>Gestión de Operaciones e Innovación Tecnológica</li>
+      <li>Metodología de la Investigación</li>
+    </ul>
+
+    <h2>Investigación</h2>
+    <ul>
+      <li>Investigador, Grupo <a href="https://seprologistica.unal.edu.co/">SEPRO</a> (Sociedad, Economía y Productividad)</li>
+      <li><a href="https://scholar.google.com/citations?user=75wxZ4AAAAAJ">Publicaciones (Google Scholar)</a></li>
+    </ul>
+
+    <h2>Proyecto Observatorio Analítica Logística</h2>
+    <p class="desc">Radares automatizados que miden, con datos públicos, movimiento carretero y portuario de la carga en Colombia.</p>
+
+    <div class="card">
+      <h3><a href="https://carlos-osorio.github.io/monitor-portuario/" target="_blank" rel="noopener">Monitor portuario</a></h3>
+      <p>Actividad semanal de los puertos colombianos con datos satelitales del FMI.</p>
+    </div>
+
+    <div class="card">
+      <h3><a href="https://carlos-osorio.github.io/monitor-fletes/" target="_blank" rel="noopener">Monitor de fletes</a></h3>
+      <p>Análisis costo mensual del transporte terrestre de carga por corredor, con datos del RNDC.</p>
+    </div>
+
+    <footer>
+      Universidad Nacional de Colombia · Bogotá · julio 2026
+    </footer>
+
+  </main>
+
+</body>
+</html>
